@@ -1,6 +1,6 @@
 import pandas as pd
 
-REQUIRED_COLUMNS = ["Stocks", "IG Bonds", "High Yield Bonds", "Emergents"]
+REQUIRED_COLUMNS = ["Government_Bonds", "IG_Bonds", "Equities", "High_Yield_Bonds", "Emerging_Markets"]
 
 
 def load_portfolio_data(filepath : str) -> pd.DataFrame:
