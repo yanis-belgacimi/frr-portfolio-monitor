@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-
+from data_loader import REQUIRED_COLUMNS
 
 class PortfolioAnalytics:
     def __init__(self, portfolio : pd.Series, benchmark : pd.Series, risk_free_rate = 0.03):
