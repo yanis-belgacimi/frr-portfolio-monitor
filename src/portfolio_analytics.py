@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from data_loader import REQUIRED_COLUMNS
+from src.data_loader import REQUIRED_COLUMNS
 
 class PortfolioAnalytics:
     def __init__(self, portfolio : pd.Series, benchmark : pd.Series, risk_free_rate = 0.03):
@@ -83,7 +83,7 @@ class PortfolioAnalytics:
     def summary(self):
         rows = {"TWR" : self.twr(), "Annualized Return" : self.annualized_return(),
                 "Sharpe" : self.sharpe(), "Sortino" : self.sortino(),
-                "Beta" : self.beta(), "Alpha" : self.alpha(), "TE" : self.tracking_error(),
+                "Beta" : self.beta(), "Alpha Jensen" : self.alpha(), "TE" : self.tracking_error(),
                 "IR" : self.information_ratio(), "Max DD" : self.max_drawdown()}
 
         df_summary = pd.DataFrame(rows).T
